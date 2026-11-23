@@ -31,6 +31,8 @@ If yes to both → binary search (on answer).
 Use for: LC 704, general lookup.
 
 ```python
+left = 0
+right = len(nums) - 1
 while left <= right:
     mid = (left + right) // 2
     if nums[mid] == target: return mid
@@ -42,6 +44,8 @@ while left <= right:
 Use for: lower bound, Koko Eating Bananas, Capacity to Ship Packages.
 
 ```python
+left = 0
+right = len(nums) - 1
 while left < right:
     mid = (left + right) // 2
     if check(mid): right = mid
@@ -52,6 +56,8 @@ return left
 ### C. Last True (`T T T F F F`)
 
 ```python
+left = 0
+right = len(nums) - 1
 while left < right:
     mid = (left + right + 1) // 2   # the +1 avoids an infinite loop
     if check(mid): left = mid
